@@ -6,7 +6,7 @@ const projetos = [
         descricao: 'Oferece aulas básicas de informática, internet e segurança digital para pessoas acima de 60 anos.',
         meta: 5000,
         arrecadado: 3200,
-        imagem: 'assets/images/idosos.jpg'
+        imagem: 'assets/images/tech.jpg'
     },
     {
         id: 'p2',
@@ -14,7 +14,7 @@ const projetos = [
         descricao: 'Conecta jovens talentos de comunidades carentes com desenvolvedores sêniores do mercado.',
         meta: 8000,
         arrecadado: 1500,
-        imagem: 'assets/images/mentoria.jpg'
+        imagem: 'assets/images/mentoria.jpeg'
     },
     {
         id: 'p3',
@@ -22,7 +22,7 @@ const projetos = [
         descricao: 'Campanha para modernizar o espaço físico e adquirir novos computadores e livros didáticos.',
         meta: 12000,
         arrecadado: 12000, 
-        imagem: 'assets/images/biblioteca.jpg'
+        imagem: 'assets/images/codekids.jpg'
     }
 ];
 
