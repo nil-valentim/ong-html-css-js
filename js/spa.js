@@ -52,11 +52,9 @@ function gerarCardsProjetos(lista) {
         `;
     });
     
-    // Retorna uma única string HTML para injeção no DOM
     return cardsHTML.join(''); 
 }
 
-// Objeto de Templates (Conteúdo das Rotas SPA)
 const templates = {
     'home': `
         <section>
@@ -104,7 +102,7 @@ const templates = {
     `
 };
 
-// Função de RENDERIZAÇÃO (Manipulação do DOM)
+
 function renderizarConteudo(rota) {
     const mainContent = document.getElementById('main-content');
     
@@ -145,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.addEventListener('click', function() {
             mainNavigation.classList.toggle('menu-aberto');
             
-            // Melhoria de acessibilidade: alterna o estado aria-expanded
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
             menuToggle.setAttribute('aria-expanded', !isExpanded);
         });
