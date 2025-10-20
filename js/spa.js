@@ -1,4 +1,4 @@
-// Dados dos Projetos
+// Dados dos Projetos (Utilizados no Sistema de Templates)
 const projetos = [
     {
         id: 'p1',
@@ -26,7 +26,7 @@ const projetos = [
     }
 ];
 
-// Função que gera o HTML dos Cards
+// Função que gera o HTML dos Cards dinamicamente (Sistema de Templates)
 function gerarCardsProjetos(lista) {
     const cardsHTML = lista.map(projeto => {
         const porcentagem = Math.round((projeto.arrecadado / projeto.meta) * 100);
@@ -52,10 +52,11 @@ function gerarCardsProjetos(lista) {
         `;
     });
     
+    // Retorna uma única string HTML para injeção no DOM
     return cardsHTML.join(''); 
 }
 
-// Objeto de Templates
+// Objeto de Templates (Conteúdo das Rotas SPA)
 const templates = {
     'home': `
         <section>
@@ -93,25 +94,39 @@ const templates = {
 
     'cadastro': `
         <p class="text-center">Por favor, utilize o link direto para o <a href="cadastro.html">Formulário de Cadastro/Login</a>.</p>
+    `,
+
+    'doacao': `
+        <h2>Informações sobre Doação</h2>
+        <p>Toda contribuição financeira é revertida integralmente para os projetos sociais. Use o nosso PIX.</p>
+        <p><strong>PIX:</strong> 27.982.452/0001-20 (CNPJ)</p>
+        <p><a href="#home" class="spa-link">Voltar para a Home</a></p>
     `
 };
 
-// Função de RENDERIZAÇÃO
+// Função de RENDERIZAÇÃO (Manipulação do DOM)
 function renderizarConteudo(rota) {
     const mainContent = document.getElementById('main-content');
     
     if (templates[rota]) {
         mainContent.innerHTML = templates[rota];
+        
+        // Se estiver em modo mobile, feche o menu após o clique
+        const mainNavigation = document.getElementById('main-navigation');
+        mainNavigation.classList.remove('menu-aberto');
     } else {
         mainContent.innerHTML = `<h2>Página Não Encontrada</h2>`;
     }
 }
 
-// Inicialização do SPA (Carrega a Home ao abrir o index.html)
-renderizarConteudo('home');
-
-// Lógica de ROTEAMENTO SPA (Ouve cliques nos links)
+// Inicialização do SPA e Roteamento (Escuta de Eventos)
 document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. Lógica para carregar o conteúdo inicial (SPA)
+    const initialHash = window.location.hash.substring(1) || 'home';
+    renderizarConteudo(initialHash);
+    
+    // 2. Lógica de ROTEAMENTO SPA (Ouve cliques nos links)
     const spaLinks = document.querySelectorAll('.spa-link'); 
 
     spaLinks.forEach(link => {
@@ -121,4 +136,18 @@ document.addEventListener('DOMContentLoaded', function() {
             renderizarConteudo(rota);
         });
     });
+
+    // 3. LÓGICA DO MENU HAMBÚRGUER (MOBILE)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNavigation = document.getElementById('main-navigation');
+
+    if (menuToggle && mainNavigation) {
+        menuToggle.addEventListener('click', function() {
+            mainNavigation.classList.toggle('menu-aberto');
+            
+            // Melhoria de acessibilidade: alterna o estado aria-expanded
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
 });
