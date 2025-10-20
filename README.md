@@ -1,4 +1,3 @@
-# 🎨 [DEV] Atividade 2: Design System e Layout Responsivo (CSS3)
 
 **Disciplina:** Desenvolvimento Front-End
 **Curso:** Análise e Desenvolvimento de Sistemas
