@@ -1,10 +1,10 @@
 /* ==================================== */
-/* 1. DESIGN SYSTEM - VARIÁVEIS CSS     */
+/* 1. DESIGN SYSTEM - VARIÁVEIS CSS     */
 /* ==================================== */
 
 :root {
-    --cor-primaria-base: #FF5722;
-    --cor-primaria-clara: #FF8A65;
+    --cor-primaria-base: #FF5722;     
+    --cor-primaria-clara: #FF8A65;   
     --cor-secundaria-base: #673AB7;
     --cor-secundaria-escura: #512DA8;
     --cor-sucesso: #28a745;
@@ -13,7 +13,7 @@
     --cor-texto: #343a40;
     --cor-borda: #dee2e6;
     --cor-fundo-branco: #ffffff;
-    --cor-fundo-rodape: var(--cor-primaria-base);
+    --cor-fundo-rodape: var(--cor-primaria-base); 
 
     --fonte-base: 1rem;
     --fonte-h1: 2.5rem;
@@ -30,45 +30,31 @@
 }
 
 /* ==================================== */
-/* 2. RESET BÁSICO E ESTILOS GERAIS     */
+/* 2. RESET BÁSICO E ESTILOS GERAIS     */
 /* ==================================== */
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 body {
-    font-family: sans-serif;
+    font-family: sans-serif; 
     line-height: 1.6;
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
     font-size: var(--fonte-base);
     min-height: 100vh;
-    width: 100%;
+    width: 100%; 
 }
 
-h1 {
-    font-size: var(--fonte-h1);
-    margin-bottom: var(--espaco-md);
-}
-
-h2 {
-    font-size: var(--fonte-h2);
-    margin-bottom: var(--espaco-sm);
-    color: var(--cor-texto);
-    text-align: center;
-}
-
-h3 {
-    font-size: var(--fonte-h3);
-    margin-bottom: var(--espaco-xs);
-    color: var(--cor-secundaria-base);
-}
+h1 { font-size: var(--fonte-h1); margin-bottom: var(--espaco-md); }
+h2 { font-size: var(--fonte-h2); margin-bottom: var(--espaco-sm); color: var(--cor-texto); text-align: center; }
+h3 { font-size: var(--fonte-h3); margin-bottom: var(--espaco-xs); color: var(--cor-secundaria-base); } 
 
 a {
-    color: var(--cor-secundaria-base);
+    color: var(--cor-secundaria-base); 
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -81,7 +67,7 @@ main article {
     background-color: var(--cor-fundo-branco);
     padding: var(--espaco-lg);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
     margin-bottom: var(--espaco-md);
 }
 
@@ -89,12 +75,12 @@ main img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    display: block;
+    display: block; 
     margin-bottom: var(--espaco-md);
 }
 
 article p strong {
-    color: var(--cor-primaria-base);
+    color: var(--cor-primaria-base); 
 }
 
 .text-center {
@@ -108,7 +94,7 @@ article p strong {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--espaco-sm);
+    padding: 0 var(--espaco-sm); 
     width: 100%;
 }
 
@@ -117,96 +103,96 @@ main {
 }
 
 main section {
-    padding: var(--espaco-lg) 0;
+    padding: var(--espaco-lg) 0; 
     border-bottom: 1px solid var(--cor-borda);
 }
 
 
 /* ==================================== */
-/* 4. CABEÇALHO E NAVEGAÇÃO (Flexbox)   */
+/* 4. CABEÇALHO E NAVEGAÇÃO (Flexbox)   */
 /* ==================================== */
 
 header {
-    background-color: var(--cor-primaria-base);
-    color: white;
-    padding: var(--espaco-xl) 0;
-    position: relative;
+    background-color: var(--cor-primaria-base); 
+    color: white; 
+    padding: var(--espaco-xl) 0; 
+    position: relative; 
 }
 
 header .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     position: relative;
 }
 
 header h1 {
-    color: white;
+    color: white; 
     margin: 0;
-    font-size: var(--fonte-h1);
+    font-size: var(--fonte-h1); 
     line-height: 1.2;
 }
 
 header p {
-    font-size: var(--fonte-h2);
+    font-size: var(--fonte-h2); 
     opacity: 0.9;
     margin-bottom: var(--espaco-sm);
 }
 
 nav {
-    background-color: var(--cor-fundo-branco);
+    background-color: var(--cor-fundo-branco); 
     padding: var(--espaco-sm) 0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav .container {
-    display: flex;
-    justify-content: center;
+    display: flex; 
+    justify-content: center; 
     align-items: center;
-    padding: 0 var(--espaco-sm);
+    padding: 0 var(--espaco-sm); 
 }
 
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0 auto;
-    max-width: 1200px;
+    margin: 0 auto; 
+    max-width: 1200px; 
     justify-content: center;
-    gap: var(--espaco-sm);
+    gap: var(--espaco-sm); 
 }
 
 nav ul li a {
-    display: inline-block;
-    padding: var(--espaco-xs) var(--espaco-sm);
-    background-color: transparent;
-    color: var(--cor-texto);
+    display: inline-block; 
+    padding: var(--espaco-xs) var(--espaco-sm); 
+    background-color: transparent; 
+    color: var(--cor-texto);       
     font-weight: bold;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: var(--cor-primaria-clara);
-    color: white;
-    text-decoration: none;
+    background-color: var(--cor-primaria-clara); 
+    color: white;                               
+    text-decoration: none;                      
 }
 
 
 /* ==================================== */
-/* 5. RODAPÉ (Footer)                   */
+/* 5. RODAPÉ (Footer)                   */
 /* ==================================== */
 
 footer {
-    background-color: var(--cor-fundo-rodape);
-    color: white;
-    padding: var(--espaco-lg) 0;
+    background-color: var(--cor-fundo-rodape); 
+    color: white; 
+    padding: var(--espaco-lg) 0;        
     text-align: center;
 }
 
 footer h2 {
-    color: white;
+    color: white; 
     margin-bottom: var(--espaco-md);
     font-size: var(--fonte-h3);
 }
@@ -218,12 +204,11 @@ footer p {
 }
 
 footer a {
-    color: white;
-    text-decoration: underline;
+    color: var(--cor-secundaria-base); 
 }
 
 footer hr {
-    margin: var(--espaco-md) auto;
+    margin: var(--espaco-md) auto; 
     border: 0;
     height: 1px;
     background-color: var(--cor-borda);
@@ -232,84 +217,49 @@ footer hr {
 
 
 /* ==================================== */
-/* 6. SISTEMA DE GRID (12 COLUNAS)      */
+/* 6. SISTEMA DE GRID (12 COLUNAS)      */
 /* ==================================== */
 
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: var(--espaco-md);
+    gap: var(--espaco-md); 
     width: 100%;
 }
 
-.grid>* {
+.grid > * {
     grid-column: span 12;
 }
 
-.col-1 {
-    grid-column: span 1;
-}
-
-.col-2 {
-    grid-column: span 2;
-}
-
-.col-3 {
-    grid-column: span 3;
-}
-
-.col-4 {
-    grid-column: span 4;
-}
-
-.col-5 {
-    grid-column: span 5;
-}
-
-.col-6 {
-    grid-column: span 6;
-}
-
-.col-7 {
-    grid-column: span 7;
-}
-
-.col-8 {
-    grid-column: span 8;
-}
-
-.col-9 {
-    grid-column: span 9;
-}
-
-.col-10 {
-    grid-column: span 10;
-}
-
-.col-11 {
-    grid-column: span 11;
-}
-
-.col-12 {
-    grid-column: span 12;
-}
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; } 
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; } 
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; } 
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; } 
 
 
 /* ==================================== */
-/* 7. COMPONENTES: BOTÕES               */
+/* 7. COMPONENTES: BOTÕES               */
 /* ==================================== */
 
 .btn {
-    display: inline-block;
-    padding: var(--espaco-sm) var(--espaco-lg);
+    display: inline-block; 
+    padding: var(--espaco-sm) var(--espaco-lg); 
     border: none;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none; 
     border-radius: 4px;
     transition: background-color 0.3s ease, transform 0.1s ease;
-    margin-top: var(--espaco-xs);
+    margin-top: var(--espaco-xs); 
 }
 
 .btn-primary {
@@ -323,11 +273,11 @@ footer hr {
 }
 
 .btn-primary:active {
-    transform: translateY(1px);
+    transform: translateY(1px); 
 }
 
 .btn-secondary {
-    background-color: var(--cor-secundaria-base);
+    background-color: var(--cor-secundaria-base); 
     color: var(--cor-fundo-branco);
 }
 
@@ -343,14 +293,14 @@ footer hr {
 
 
 /* ==================================== */
-/* 8. COMPONENTES: CARD DE PROJETO      */
+/* 8. COMPONENTES: CARD DE PROJETO      */
 /* ==================================== */
 
 .card {
     background-color: var(--cor-fundo-branco);
     border: 1px solid var(--cor-borda);
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -365,21 +315,21 @@ footer hr {
 
 .card-img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: auto; 
+    object-fit: cover; 
 }
 
 .card-content {
-    padding: var(--espaco-md);
-    flex-grow: 1;
+    padding: var(--espaco-md); 
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 
 /* ==================================== */
-/* 9. ESTILIZAÇÃO DO FORMULÁRIO         */
+/* 9. ESTILIZAÇÃO DO FORMULÁRIO         */
 /* ==================================== */
 
 form {
@@ -399,7 +349,7 @@ fieldset {
 
 legend {
     font-size: var(--fonte-h3);
-    color: var(--cor-primaria-base);
+    color: var(--cor-primaria-base); 
     padding: 0 var(--espaco-xs);
     font-weight: bold;
 }
@@ -423,13 +373,13 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: var(--cor-primaria-base);
+    border-color: var(--cor-primaria-base); 
     outline: 0;
-    box-shadow: 0 0 0 3px var(--cor-primaria-clara);
+    box-shadow: 0 0 0 3px var(--cor-primaria-clara); 
 }
 
 label {
-    display: block;
+    display: block; 
     margin-top: var(--espaco-xs);
     font-weight: 500;
 }
@@ -449,20 +399,20 @@ input:valid {
 
 
 /* ==================================== */
-/* 10. NAVEGAÇÃO MOBILE (HAMBÚRGUER)    */
+/* 10. NAVEGAÇÃO MOBILE (HAMBÚRGUER)    */
 /* ==================================== */
 
 .menu-toggle {
-    display: none;
+    display: none; 
     background: none;
     border: none;
     cursor: pointer;
     padding: var(--espaco-xs);
-    z-index: 1000;
+    z-index: 1000; 
 }
 
 .hamburger-bar {
-    background-color: var(--cor-fundo-branco);
+    background-color: var(--cor-fundo-branco); 
     display: block;
     width: 25px;
     height: 3px;
@@ -472,103 +422,78 @@ input:valid {
 
 
 /* ==================================== */
-/* 11. RESPONSIVIDADE (MEDIA QUERIES)   */
+/* 11. RESPONSIVIDADE (MEDIA QUERIES)   */
 /* ==================================== */
 
 @media (min-width: 576px) {
     .container {
-        padding: 0 var(--espaco-md);
+        padding: 0 var(--espaco-md); 
     }
 }
 
 @media (min-width: 768px) {
-    .col-md-6 {
-        grid-column: span 6;
-    }
-
-    .col-md-4 {
-        grid-column: span 4;
-    }
+    .col-md-6 { grid-column: span 6; } 
+    .col-md-4 { grid-column: span 4; }
 }
 
 @media (min-width: 992px) {
-
+    
     header .container {
-        flex-direction: column;
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
-
+    
     .menu-toggle {
         display: none;
     }
-
     nav hr {
-        display: none;
+        display: none; 
     }
-
-    .grid>* {
-        grid-column: auto;
+    
+    .grid > * {
+        grid-column: auto; 
     }
-
-    .col-lg-3 {
-        grid-column: span 3;
-    }
-
-    .col-lg-4 {
-        grid-column: span 4;
-    }
-
-    .col-lg-8 {
-        grid-column: span 8;
-    }
+    
+    .col-lg-3 { grid-column: span 3; } 
+    .col-lg-4 { grid-column: span 4; }
+    .col-lg-8 { grid-column: span 8; }
 }
 
 @media (min-width: 1200px) {
     h1 {
-        font-size: 3rem;
+        font-size: 3rem; 
     }
 }
 
 
 /* ==================================== */
-/* 12. MOBILE OVERRIDE (MAX-WIDTH)      */
+/* 12. MOBILE OVERRIDE (MAX-WIDTH)      */
 /* ==================================== */
 
 @media (max-width: 991px) {
-
+    
     header .container {
-        flex-direction: column;
+        flex-direction: column; 
         align-items: flex-start;
         text-align: left;
         padding-bottom: 0;
     }
-
+    
     .menu-toggle {
-        display: block;
+        display: block; 
         position: absolute;
         top: var(--espaco-md);
         right: var(--espaco-md);
     }
-
+    
     #main-navigation {
         position: absolute;
         width: 100%;
         left: 0;
-        top: 0;
+        top: 0; 
         background-color: var(--cor-texto);
-        padding-top: 80px;
-
-        /* --- Animação do Menu --- */
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-    }
-
-    /* Classe que o JS vai adicionar */
-    #main-navigation.menu-aberto {
-        max-height: 500px;
-        /* Altura suficiente para os links */
+        padding-top: 80px; 
     }
 
     #main-navigation ul {
@@ -580,137 +505,17 @@ input:valid {
         margin: 0;
         justify-content: flex-start;
     }
-
+    
     #main-navigation a {
-        color: var(--cor-fundo-branco);
-        background-color: var(--cor-texto);
+        color: var(--cor-fundo-branco); 
+        background-color: var(--cor-texto); 
         width: 100%;
         text-align: center;
     }
-
+    
     nav hr {
         display: block;
         background-color: var(--cor-fundo-branco);
         width: 50%;
-    }
-}
-
-
-/* ==================================== */
-/* 13. ESTILOS DA ATIVIDADE 3 (JS)      */
-/* ==================================== */
-
-/* --- Estilos da Validação do Formulário --- */
-/* (O seu JS procura por essas classes) */
-
-.erro-mensagem {
-    color: var(--cor-erro, #dc3545);
-    font-size: var(--fonte-pequena, 0.875rem);
-    font-weight: bold;
-    margin-top: var(--espaco-xs, 0.5rem);
-    display: block;
-}
-
-input.invalido {
-    border: 2px solid var(--cor-erro, #dc3545) !important;
-    background-color: #fff8f8;
-}
-
-/* --- Estilos da Barra de Progresso (SPA) --- */
-/* (O seu JS gera esse HTML) */
-
-.barra-progresso {
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 10px 0;
-    height: 20px;
-}
-
-.progresso-preenchido {
-    background-color: var(--cor-secundaria-base, #673AB7);
-    height: 100%;
-    text-align: center;
-    color: white;
-    line-height: 20px;
-    /* Centraliza o texto da % */
-    font-size: var(--fonte-pequena, 0.875rem);
-    font-weight: bold;
-    transition: width 0.5s ease;
-}
-
-/* ==================================== */
-/* 14. MODO ESCURO (ACESSIBILIDADE)      */
-/* ==================================== */
-
-@media (prefers-color-scheme: dark) {
-
-    /* Vamos redefinir as variáveis de cor para o modo escuro */
-    :root {
-        --cor-fundo: #121212;
-        /* Fundo quase preto */
-        --cor-texto: #e0e0e0;
-        /* Texto cinza claro */
-        --cor-fundo-branco: #1e1e1e;
-        /* Fundo dos cards/forms (cinza escuro) */
-        --cor-borda: #444;
-        /* Bordas mais claras */
-
-        /* Cores primárias e secundárias podem precisar de ajuste
-           mas as suas (Laranja e Roxo) já têm bom contraste
-           no fundo escuro, então vamos mantê-las. */
-    }
-
-    header {
-        background-color: var(--cor-fundo-rodape);
-        color: white;
-        padding: var(--espaco-xl) 0;
-    }
-
-    nav {
-        background-color: var(--cor-fundo-rodape);
-        color: var(--cor-texto);
-    }
-
-    /* Ajustes finos para o modo escuro */
-
-    body,
-    nav,
-    form,
-    .card {
-        background-color: var(--cor-fundo-branco);
-        color: var(--cor-texto);
-    }
-
-    body {
-        background-color: var(--cor-fundo);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: var(--cor-texto);
-    }
-
-    nav ul li a {
-        color: var(--cor-texto);
-    }
-
-    nav ul li a:hover {
-        background-color: var(--cor-primaria-clara);
-        color: white;
-    }
-
-    /* Garante que imagens não fiquem "brilhando" demais */
-    img {
-        opacity: 0.85;
-        transition: opacity 0.3s ease;
-    }
-
-    img:hover {
-        opacity: 1;
     }
 }
