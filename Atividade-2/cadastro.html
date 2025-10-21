@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <title>Cadastro e Login - Instituto Conecta Futuro</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
+    
     <header>
         <div class="container">
             <h1>Formulário de Cadastro e Acesso à Plataforma</h1>
-
-            <button class="menu-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Abri ou Fechar Menu de Navegação" >
+            
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-navigation">
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
                 <span class="hamburger-bar"></span>
@@ -24,9 +22,9 @@
     <nav id="main-navigation">
         <div class="container">
             <ul>
-                <li><a href="index.html#home">Início</a></li>
-                <li><a href="index.html#projetos">Projetos e Doações</a></li>
-                <li><a href="cadastro.html">Cadastro/Login</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos e Doações</a></li>
+                <li><a href="cadastro.html">Cadastro/Login</a></li> 
             </ul>
             <hr>
         </div>
@@ -54,36 +52,40 @@
             <h2>Novo Cadastro - Preencha Seus Dados para Participar</h2>
             <p>Seja um voluntário(a) ou apoiador(a) da nossa causa social. Seus dados são confidenciais.</p>
 
-            <form action="#" method="POST" id="cadastro-form" novalidate>
+            <form action="#" method="POST"> 
                 <fieldset>
                     <legend>Dados Pessoais</legend>
                     <label for="nome">Nome Completo:</label>
                     <input type="text" id="nome" name="nome_completo" required>
-                    <span class="erro-mensagem" id="erro-nome"></span>
                     <br><br>
                     <label for="nascimento">Data de Nascimento:</label>
                     <input type="date" id="nascimento" name="data_nascimento" required>
                     <br><br>
                     <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                        title="Formato esperado: 999.999.999-99" required>
-                    <span class="erro-mensagem" id="erro-cpf"></span>
+                    <input type="text" id="cpf" name="cpf" 
+                           pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                           title="Formato esperado: 999.999.999-99" 
+                           required>
                     <br><br>
                 </fieldset>
                 <br>
+
                 <fieldset>
                     <legend>Contato e Localização</legend>
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" required>
-                    <span class="erro-mensagem" id="erro-email"></span>
                     <br><br>
                     <label for="tel">Telefone:</label>
-                    <input type="tel" id="tel" name="telefone" pattern="\(\d{2}\) \d{4,5}-\d{4}"
-                        title="Formato esperado: (XX) XXXXX-XXXX" required>
+                    <input type="tel" id="tel" name="telefone" 
+                           pattern="\(\d{2}\) \d{4,5}-\d{4}" 
+                           title="Formato esperado: (XX) XXXXX-XXXX" 
+                           required>
                     <br><br>
                     <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" title="Formato esperado: 99999-999"
-                        required>
+                    <input type="text" id="cep" name="cep" 
+                           pattern="\d{5}-\d{3}" 
+                           title="Formato esperado: 99999-999" 
+                           required>
                     <br><br>
                     <label for="endereco">Endereço (Rua, Número):</label>
                     <input type="text" id="endereco" name="endereco" required>
@@ -119,7 +121,7 @@
                 <br>
 
                 <button type="submit" class="btn btn-secondary">Enviar Cadastro</button>
-
+                <button type="reset" class="btn">Limpar Formulário</button>
             </form>
         </section>
     </main>
@@ -137,7 +139,6 @@
             <p>&copy; 2025 - Conecta Futuro. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="js/formValidation.js"></script>
-</body>
 
+</body>
 </html>
