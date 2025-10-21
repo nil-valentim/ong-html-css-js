@@ -218,7 +218,8 @@ footer p {
 }
 
 footer a {
-    color: var(--cor-secundaria-base);
+    color: white;
+    text-decoration: underline;
 }
 
 footer hr {
