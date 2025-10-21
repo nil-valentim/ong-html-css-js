@@ -638,3 +638,79 @@ input.invalido {
     font-weight: bold;
     transition: width 0.5s ease;
 }
+
+/* ==================================== */
+/* 14. MODO ESCURO (ACESSIBILIDADE)      */
+/* ==================================== */
+
+@media (prefers-color-scheme: dark) {
+
+    /* Vamos redefinir as variáveis de cor para o modo escuro */
+    :root {
+        --cor-fundo: #121212;
+        /* Fundo quase preto */
+        --cor-texto: #e0e0e0;
+        /* Texto cinza claro */
+        --cor-fundo-branco: #1e1e1e;
+        /* Fundo dos cards/forms (cinza escuro) */
+        --cor-borda: #444;
+        /* Bordas mais claras */
+
+        /* Cores primárias e secundárias podem precisar de ajuste
+           mas as suas (Laranja e Roxo) já têm bom contraste
+           no fundo escuro, então vamos mantê-las. */
+    }
+
+    header {
+        background-color: var(--cor-fundo-rodape);
+        color: white;
+        padding: var(--espaco-xl) 0;
+    }
+
+    nav {
+        background-color: var(--cor-fundo-rodape);
+        color: var(--cor-texto);
+    }
+
+    /* Ajustes finos para o modo escuro */
+
+    body,
+    nav,
+    form,
+    .card {
+        background-color: var(--cor-fundo-branco);
+        color: var(--cor-texto);
+    }
+
+    body {
+        background-color: var(--cor-fundo);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--cor-texto);
+    }
+
+    nav ul li a {
+        color: var(--cor-texto);
+    }
+
+    nav ul li a:hover {
+        background-color: var(--cor-primaria-clara);
+        color: white;
+    }
+
+    /* Garante que imagens não fiquem "brilhando" demais */
+    img {
+        opacity: 0.85;
+        transition: opacity 0.3s ease;
+    }
+
+    img:hover {
+        opacity: 1;
+    }
+}
